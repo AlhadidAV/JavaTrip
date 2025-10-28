@@ -1,0 +1,444 @@
+/* General */
+
+:root {
+  --hijau-tua: #626F47;
+  --hijau-muda: #A4B465;
+  --oren: #F0BB78;
+  --krem: #F5ECD5;
+  --hitam: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+  color: var(--hitam);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(164, 180, 101, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--oren);
+}
+
+/* Main Hero Gambar*/
+
+main{
+    position: relative;
+    width: 100%;
+    margin-top: 65px;
+    height: 400px;
+}
+main .pembuka{
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+}
+.pembuka h1{
+    color: white;
+    font-size: 115px;
+    margin-bottom: -30px;
+}
+.pembuka p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.pembuka button{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--oren);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.pembuka button:hover{
+    background-color: #f5c991;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide1 {
+    background: url('../img/bromo.jpg') no-repeat center;
+    background-size: cover;
+    animation: fade 12s infinite;
+    -webkit-animation: fade 10s infinite;
+}
+
+.slide2 {
+    background: url("../img/pangandaran.png") no-repeat center;
+    background-size: cover;
+    animation: fade2 12s infinite;
+    -webkit-animation: fade2 10s infinite;
+}
+
+.slide3 {
+    background: url("../img/dieng.jpg") no-repeat center;
+    background-size: cover;
+    animation: fade3 12s infinite;
+    -webkit-animation: fade3 10s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    33.333% {
+        opacity: 0;
+    }
+
+    66.666% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 0;
+    }
+
+    33.333% {
+        opacity: 1
+    }
+
+    66.666% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 0;
+    }
+
+    33.333% {
+        opacity: 0;
+    }
+
+    66.666% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Perkenalan Singkat */
+
+.quote{
+    place-content: center;
+    min-height: 300px;
+    background-color: var(--krem);
+    text-align: center;
+    padding: 20px 150px;
+    font-style: italic;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+.quote h1{
+    font-size: 60px;
+}
+
+/* Daerah-daerah singkat */
+
+.daerah {
+    padding: 50px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.daerah h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.daerah div {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.daerah div article {
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.daerah div article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.jabar,
+.jateng,
+.jatim {
+    background-size: cover;
+    background-position: center;
+}
+.jabar{
+    background-image: url('../img/tangkubanPerahu.jpg');
+}
+.jateng{
+    background-image: url('../img/diengAwan.jpg');
+}
+.jatim{
+    background-image: url('../img/monumenHiuBuaya.jpg');
+}
+.daerah div article h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15px 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
+}
+.daerah div article:hover h3 {
+    background: rgba(240, 187, 120, 0.9);
+    color: var(--hitam);
+}
+
+/* Artikel Terbaru */
+
+.terbaru {
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
+    background-color: var(--krem);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.terbaru h1{
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+}
+/* CONTAINER & TRACK */
+.carousel-container {
+    position: relative;
+    height: 400px;
+    width: 90%;
+    overflow: hidden;
+    /* Kontainer tidak terlalu lebar */
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    /* MEMPERBAIKI MASALAH: Memposisikan di tengah */
+    overflow: hidden;
+    /* Penting untuk menyembunyikan slide yang meluber */
+}
+
+.kotakTerbaru {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* SLIDE (ARTICLE) */
+.kotakTerbaru article {
+    background-color: white;
+    width: 1200px;
+    height: 100%;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    border-radius: 10px;
+
+    /* PENTING UNTUK JS: Diperlukan untuk metode transform */
+    position: absolute;
+    transition: left 0.5s ease-in-out;
+    /* Transisi agar posisi awal smooth */
+}
+
+/* CHILD ELEMENTS (TETAP SAMA) */
+article figure {
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+article aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+aside h2,
+aside p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+aside button {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+aside button:hover {
+    background-color: #333;
+}
+
+
+/* NAVIGASI (NEXT/PREV BUTTONS) */
+.nav-button {
+    position: absolute;
+    top: 350px;
+    transform: translateY(-50%);
+    background-color: var(--hijau-tua);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 24px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+.nav-button:hover{
+    background-color: var(--hijau-muda);
+}
+
+.prev-button {
+    left: 50px;
+}
+
+.next-button {
+    right: 50px;
+}
+
+.nav-button[disabled] {
+    display: none;
+    transition: all 0.5s ease-in-out;
+    /* Tampilkan tombol tapi dalam kondisi nonaktif */
+    cursor: default;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--hijau-tua);
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.sosial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.item a:hover {
+    transform: scale(1.05);
+
+}
+
+.item img {
+    width: 24px;
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
