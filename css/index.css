@@ -1,67 +1,3 @@
-/* General */
-
-:root {
-  --hijau-tua: #626F47;
-  --hijau-muda: #A4B465;
-  --oren: #F0BB78;
-  --krem: #F5ECD5;
-  --hitam: #333;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-html{
-    scroll-behavior: smooth;
-}
-body {
-  background-color: #fff;
-  color: var(--hitam);
-  scroll-behavior: smooth;
-}
-
-/* Navbar */
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(164, 180, 101, 0.85);
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  z-index: 1000;
-}
-
-nav h1 {
-  font-size: 24px;
-  font-weight: 800;
-  color: #fff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: var(--oren);
-}
-
 /* Main Hero Gambar*/
 
 main{
@@ -297,12 +233,9 @@ main .pembuka{
     height: 400px;
     width: 90%;
     overflow: hidden;
-    /* Kontainer tidak terlalu lebar */
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto 50px;
-    /* MEMPERBAIKI MASALAH: Memposisikan di tengah */
     overflow: hidden;
-    /* Penting untuk menyembunyikan slide yang meluber */
 }
 
 .kotakTerbaru {
@@ -312,11 +245,29 @@ main .pembuka{
     gap: 1em;
     transition: transform 0.5s ease-in-out;
 }
+.destinasi1 figure{
+    background-image: url('../img/tangkubanPerahu.jpg');
+    background-size: cover;
+}
+.destinasi2 figure{
+    background-image: url('../img/karimunJawa.jpg');
+    background-size: cover;
+}
+.destinasi3 figure{
+    background-image: url('../img/tamanSafari.jpg');
+    background-size: cover;
+    background-position:center;
+}
+.destinasi4 figure{
+    background-image: url('../img/pantaiTigaWarna.png');
+    background-size: cover;
+    
+}
 
 /* SLIDE (ARTICLE) */
 .kotakTerbaru article {
     background-color: white;
-    width: 1200px;
+    width: 1000px;
     height: 100%;
     flex-shrink: 0;
     display: grid;
@@ -398,47 +349,4 @@ aside button:hover {
     transition: all 0.5s ease-in-out;
     /* Tampilkan tombol tapi dalam kondisi nonaktif */
     cursor: default;
-}
-
-/* Footer */
-
-footer {
-    background-color: var(--hijau-tua);
-    padding: 20px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: white;
-}
-
-.sosial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-}
-
-.item a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.item a:hover {
-    transform: scale(1.05);
-
-}
-
-.item img {
-    width: 24px;
-}
-
-footer p {
-    font-size: 14px;
-    color: white;
-    margin: 0;
 }

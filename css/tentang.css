@@ -1,0 +1,98 @@
+body{
+    background: var(--krem);
+}
+
+main {
+    margin: 100px auto 50px;
+    width: 900px;
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+main h1 {
+    color: var(--hijau-tua);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+main p {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.profil {
+    width: 80%;
+    background-color: var(--hijau-tua);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profil img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--hijau-muda);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profil article {
+    text-align: left;
+}
+
+.profil article h2 {
+    margin-bottom: 10px;
+}
+
+.profil article p {
+    margin: 5px 0;
+    color: white;
+}
+
+.visiMisi {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.visiMisi h2 {
+    color: var(--hijau-tua);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.visiMisi ul {
+    font-family: "Open Sans", sans-serif;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.visiMisi li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.visiMisi li::before {
+    content: "•";
+    position: absolute;
+    display: inline-block;
+    font-size: 20px;
+    left: 0;
+    color: var(--oren);
+    font-weight: bold;
+}
