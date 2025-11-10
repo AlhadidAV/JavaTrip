@@ -18,6 +18,9 @@
 html {
     scroll-behavior: smooth;
 }
+a{
+    cursor: pointer;
+}
 
 body {
     background-color: #fff;
